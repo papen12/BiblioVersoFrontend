@@ -2,7 +2,7 @@ import './Home.css';
 import type { FC } from 'react'; 
 import { NavBar } from '../../components/navBar/navBar';
 import Hero from '../../components/hero/Hero';
-import { faHome, faBook, faUser, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { FaHome, FaBook, FaUser, FaInfoCircle } from 'react-icons/fa';
 import logo from '../../assets/logazo.png'; 
 import LibroCarousel from '../../components/carrouselLibros/LibroCarousel';
 import AutorCarousel from '../../components/carrouselAutores/AutorCarousel';
@@ -10,11 +10,12 @@ import Footer from '../../components/footer/footer';
 
 export const Home: FC = () => {
   const navItems = [
-    { id: '1', label: 'Inicio', href: '/', icon: faHome },
-    { id: '2', label: 'Catálogo', href: '/signUp', icon: faBook },
-    { id: '4', label: 'Registrarse', href: '/signUp', icon: faUser },
-    { id: '5', label: 'Iniciar Sesion', href: '/login', icon: faInfoCircle },
+    { id: '1', label: 'Inicio', href: '/', icon: FaHome },
+    { id: '2', label: 'Catálogo', href: '/catalogo', icon: FaBook },
+    { id: '4', label: 'Registrarse', href: '/signUp', icon: FaUser },
+    { id: '5', label: 'Iniciar Sesion', href: '/login', icon: FaInfoCircle },
   ];
+
   return (
     <div className="home-container">
       <NavBar
@@ -23,10 +24,10 @@ export const Home: FC = () => {
         logoAlt="Logo de la aplicación"
         className="home-navbar"
       />
-      <Hero></Hero>
-      <LibroCarousel></LibroCarousel>
-      <AutorCarousel></AutorCarousel>
-      <Footer></Footer>
+      <Hero />
+      <LibroCarousel />
+      <AutorCarousel />
+      <Footer />
     </div>
   );
 };

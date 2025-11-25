@@ -1,14 +1,14 @@
-import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import type { IconType } from "react-icons";
 
-export type SideBarItem={
-    id:string
-    label:string
-    icon?:IconDefinition
-    onClick?: () => void
-}
+export type SideBarItem = {
+  id: string;
+  label: string;
+  icon?: IconType;
+  onClick?: () => void;
+};
 
 export interface SideBarProps {
-    username:string
-    items:SideBarItem[]
-    className?:string
+  username: string;
+  items: SideBarItem[];
+  className?: string;
 }
