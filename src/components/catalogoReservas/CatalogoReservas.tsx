@@ -53,7 +53,6 @@ const ReservaCatalogo: FC<ReservaCatalogoProps> = ({ ciCliente }) => {
         setLoading(false);
       }
     };
-
     cargarLibrosDisponibles();
   }, []);
 
@@ -134,30 +133,33 @@ const ReservaCatalogo: FC<ReservaCatalogoProps> = ({ ciCliente }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h3>Confirmar Reserva</h3>
-            <button onClick={() => {
-              setShowModal(false);
-              setFechaLimite(null);
-            }} className="close-btn">
+            <button
+              onClick={() => {
+                setShowModal(false);
+                setFechaLimite(null);
+              }}
+              className="close-btn"
+            >
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          
+
           <div className="fecha-input-group">
             <label>Fecha de reserva:</label>
             <DatePicker
               selected={fechaActual}
-              onChange={() => {}}
+              onChange={() => null}
               disabled
               className="input-field date-picker-input"
               dateFormat="dd/MM/yyyy"
             />
           </div>
-          
+
           <div className="fecha-input-group">
             <label>Fecha límite de devolución:</label>
             <DatePicker
               selected={fechaLimite}
-              onChange={(date: Date) => setFechaLimite(date)}
+              onChange={(date: Date | null) => setFechaLimite(date)}
               minDate={minFechaLimite}
               className="input-field date-picker-input"
               placeholderText="Selecciona una fecha"
@@ -165,7 +167,7 @@ const ReservaCatalogo: FC<ReservaCatalogoProps> = ({ ciCliente }) => {
               required
             />
           </div>
-          
+
           <div className="modal-actions">
             <button
               onClick={() => {
