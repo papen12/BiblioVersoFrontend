@@ -1,18 +1,17 @@
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-
+import type { IconType } from 'react-icons';
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaTwitter, 
+  FaYoutube 
+} from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 export type NavItem = {
   id: string;
   label: string;
   href: string;
-  icon?: IconDefinition;
+  icon?: IconType;
 };
 
 export interface NavBarProps {
@@ -27,30 +26,30 @@ export const socialItems: NavItem[] = [
     id: 'facebook',
     label: 'Facebook',
     href: '#',
-    icon: faFacebookF,
+    icon: FaFacebookF,
   },
   {
     id: 'instagram',
     label: 'Instagram',
     href: '#',
-    icon: faInstagram,
+    icon: FaInstagram,
   },
   {
     id: 'twitter',
     label: 'Twitter',
     href: '#',
-    icon: faTwitter,
+    icon: FaTwitter,
   },
   {
     id: 'email',
     label: 'Email',
     href: '#',
-    icon: faEnvelope,
+    icon: MdEmail,
   },
   {
     id: 'youtube',
     label: 'YouTube',
     href: '#',
-    icon: faYoutube,
+    icon: FaYoutube,
   },
 ];
