@@ -1,13 +1,13 @@
 import type { FC } from 'react';
 import "./footer.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+
+import { 
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube
+} from "react-icons/fa";
+import { FaRegEnvelope } from "react-icons/fa6";
 
 const Footer: FC = () => {
   return (
@@ -38,11 +38,11 @@ const Footer: FC = () => {
       </div>
 
       <div className="footer-social">
-        <FontAwesomeIcon icon={faFacebookF} />
-        <FontAwesomeIcon icon={faInstagram} />
-        <FontAwesomeIcon icon={faTwitter} />
-        <FontAwesomeIcon icon={faEnvelope} />
-        <FontAwesomeIcon icon={faYoutube} />
+        <FaFacebookF />
+        <FaInstagram />
+        <FaTwitter />
+        <FaRegEnvelope />
+        <FaYoutube />
       </div>
 
       <div className="footer-copy">
